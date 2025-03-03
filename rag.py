@@ -403,7 +403,7 @@ if __name__ == "__main__":
     load_dotenv()
     
     GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY")
-    chatbot = GemRag(api_key="AIzaSyB2lrzCyxzWUy0adRB9_pPPqlamclMrlII")
+    chatbot = GemRag(api_key=GOOGLE_API_KEY)
     chatbot.load_pdf("./test.pdf")
     chatbot.optimize_vector_store()
     while True:
